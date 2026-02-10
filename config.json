@@ -13,6 +13,9 @@
                 "filename": "info.json"
             }
         ],
+		"tapas": {
+            "directory": ["{series[title]}","0_{scene}", "content"]
+        },
         "nhentai": {
             "directory": ["{title|title_en}", "0_0", "content"]
         },

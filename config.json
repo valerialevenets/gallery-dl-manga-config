@@ -1,0 +1,44 @@
+{
+    "extractor": {
+        "chapter-unique": true,
+        "lang": ["en", "ru", "uk"],
+        "filename": "{page|filename}.{extension}",
+        "directory": ["{manga|title}", "{volume}_{chapter}", "content"],
+        "sleep-429": 90,
+        "postprocessors": [
+            {
+                "name": "metadata",
+                "directory": "../.",
+                "event": "post",
+                "filename": "info.json"
+            }
+        ],
+        "nhentai": {
+            "directory": ["{title|title_en}", "0_0", "content"]
+        },
+        "webtoons": {
+            "directory": ["{comic_name}", "0_{episode}", "content"],
+            "filename": "{num}.{extension}"
+        },
+        "twitter": {
+            "filename": "{tweet_id}.{extension}",
+            "directory": ["twitter", "{author[name]}", "content"],
+            "cookies": {
+                "_twitter_sess": "BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--1164b91ac812d853b877e93ddb612b7471bebc74",
+		"auth_token": "979a2f1181df4ba251bcb4a3ff40b5a6b3a80cc4",
+		"ct0": "85d3c585a8666dc335ac48484a60fad2b6473620c8c9ef591bd6766ac8b5a2d0330a2612f893046cc8080466debda529dc6c03fa022427bf3b54600b77e7756b6f7fb7685756b8cef8cff05de8199ecd"
+            }
+        },
+	"dynastyscans": {
+		"directory": ["{manga|title}", "0_{chapter}{chapter_minor}", "content"]
+	}
+    },
+    "downloader": {
+
+    },
+    "output": {
+
+    },
+    "postprocessor": {
+    }
+}
